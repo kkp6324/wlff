@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>39切图</title>
+</head>
+<style>
+	*{
+		color:#bbb;
+		margin: 0;
+		text-decoration: none;
+		padding: 0;
+		list-style: none;
+	}
+	.header{
+		height: 102px;
+		background-color:#fff;
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.logo{
+		width: 165px;
+		margin-top: 24px;
+		float: left;
+	}
+	.right-text{
+		float: right;
+		margin-top: 40px;
+		font-weight:bold;
+		font-size: 14px;
+	}
+	.right-text>li{
+		font-family: "Gotham-Medium";
+		color: #495057;
+		float: left;
+		margin-right: 94px;
+		position: relative;
+	}
+	.img{
+		text-align: center;
+		position: relative;
+		margin:0 auto;
+		width: 1200px;
+		height:500px;
+	}
+	.img>span:first-child{
+		position: absolute;
+		left:50%;
+		font-size: 40px;
+		color: #495057;
+		transform: translate(-50%,160px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.img>span:nth-child(2){
+		position: absolute;
+		left:50%;
+		font-size: 16px;
+		color: #fff9db;
+		transform: translate(-50%,260px);
+		font-family: "Georgia";
+		font-style: italic
+	}
+	.big-c{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color:#f7f4ea;
+		position: absolute;
+		left:50%;
+		opacity: .8;
+		transform: translate(-50%,340px);
+	}
+	.big-m{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color:#fff;
+		position: absolute;
+		left:50%;
+		transform: translate(-50%,355px);
+		box-shadow: 0px 2px 4px 0px rgba(0, 1, 1, 0.2);
+	}
+	.down{
+		position: absolute;
+		left:50%;
+		transform: translate(-50%,368px);
+		width: 24px;
+	}
+	.featured-work{
+		height: 915px;
+		width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+	}
+	.featured-work>span:nth-child(1){
+		position: absolute;
+		left:50%;
+		font-size: 30px;
+		color:#303030;
+		transform: translate(-50%,50px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.featured-work>span:nth-child(2){
+		width: 200px;
+		height: 3px;
+		background-color: #303030;
+		position: absolute;
+		transform: translate(-50%,90px);
+	}
+	.featured-work>span:nth-child(3){
+		font-size: 15px;
+		color: #303030;
+		transform: translate(-50%,100px);
+		position: absolute;
+		left:50%;
+	}
+	.picture{
+		height: 633px;
+		width:100%;
+		position: relative;
+		top:210px
+	}
+	.picture>ul>li{
+		transition: all .5s;
+		border-radius:5px;
+		width: 260px;
+		height: 170px;
+		float: left;
+		margin:0 70px 60px 70px;
+	}
+	.picture>ul>li>img{
+		border-radius:5px;
+		width: 100%;
+		height: 100%;
+	}
+	.team{
+		position: relative;
+		width: 1200px;
+		margin: auto;
+		height: 532px;
+		text-align: center;
+	}
+	.team>span:nth-child(1){
+		position: absolute;
+		left:50%;
+		font-size: 30px;
+		color:#303030;
+		transform: translate(-50%,50px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.team>span:nth-child(2){
+		width: 200px;
+		height: 3px;
+		background-color: #303030;
+		position: absolute;
+		transform: translate(-50%,90px);
+	}
+	.team>span:nth-child(3){
+		position: absolute;
+		left:50%;
+		font-size: 15px;
+		color: #303030;
+		transform: translate(-50%,100px);
+	}
+	.t-menber{
+		height: 300px;
+		width:100%;
+		position: relative;
+		top:200px;
+	}
+	.t-menber>ul>li{
+		position: relative;
+		width: 210px;
+		height: 260px;
+		float: left;
+		margin: 0 45px;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0px 2px 30px 0px rgba(0, 1, 1, 0.2);
+	}
+	.head-portrait{
+		height: 80px;
+		width: 80px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		overflow: hidden;
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+		transform: translate(-50%,20px);
+		position: absolute;
+		left:50%;
+	}
+	.name{
+		transform: translate(-50%,120px);
+		position: absolute;
+		left:50%;
+		font-size: 20px;
+		color: #303030;
+		font-weight:bold;
+	}
+	.position{
+		transform: translate(-50%,150px);
+		position: absolute;
+		left:50%;
+		font-size: 12px;
+		color: #303030;
+		font-family: "Georgia";
+		font-style: italic
+	}
+	.head-portrait>img{
+		width:100%;
+	}
+	.contact{
+		transform: translate(-50%,200px);
+		position: absolute;
+		left:50%;
+	}
+	.contact>li{
+		margin: 0 5px;
+		float: left;
+		width: 17px;
+		height: 17px;
+	}
+	.contact>li>img{
+		width: 100%;
+		height: 100%;
+	}
+	.message{
+		height: 566px;
+		width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		text-align: center
+	}
+	.message>span:nth-child(1){
+		position: absolute;
+		font-size: 30px;
+		color:#303030;
+		transform: translate(-50%,50px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.message>span:nth-child(2){
+		width: 200px;
+		height: 3px;
+		background-color: #303030;
+		position: absolute;
+		transform: translate(-50%,90px);
+	}
+	.map{
+		position: absolute;
+		height: 320px;
+		width: 320px;
+		transform: translate(65%,170px);
+		border:5px solid #fff;
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+	}
+	.message>span:nth-child(3){
+		position: absolute;
+		font-size:15px;
+		color:#303030;
+		left: 0;
+		transform: translate(321%,150px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.message>span:nth-child(4){
+		position: absolute;
+		font-size:15px;
+		color:#303030;
+		right: 0;
+		transform: translate(-493px,150px);
+		font-weight:bold;
+		font-family: "等线"
+	}
+	.message>.text{
+		resize:none;
+		position:absolute;
+		right: 0;
+		transform: translate(-15px,170px);
+		width: 500px;
+		height: 205px;
+		font-size: 25px;
+		background-color:#f2f2f2;
+		outline:none;
+		color: #303030;
+		font-family: "等线";
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.3) inset;
+		padding:20px;
+	}
+	.email{
+		padding:20px;
+		resize:none;
+		position:absolute;
+		right: 0;
+		transform: translate(-241px,438px);
+		width: 274px;
+		height: 22px;
+		font-size: 15px;
+		background-color:#f2f2f2;
+		outline:none;
+		color: #303030;
+		font-family: "等线";
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.3) inset;
+	}
+	.send{
+		width: 205px;
+		height:58px;
+		background-color: #6995a9;
+		resize:none;
+		position:absolute;
+		right: 0;
+		transform: translate(-10px,435px);
+		color:#fff;
+		font-weight:bold;
+		line-height: 60px;
+		font-size: 20px;
+		border:4px solid #fff;
+		box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+	}
+	.footer{
+		height:80px;
+		background-color:#303030;
+	}
+	.gif{
+		animation:myfirst 1.2s linear infinite;
+		position: absolute;
+		left:50%;
+		top:10px;
+	}
+	@keyframes myfirst{
+		0%  {top:10px;}
+		25% {top:15px;}
+		50% {top:20px;}
+		75% {top:15px;}
+		100% {top:10px;}
+	}
+	.picture>ul>li:hover{
+		transition: all .5s;
+		box-shadow:  0px 4px 30px 0px rgba(0, 0, 0, 0.5);
+	}
+</style>
+<body>
+	<div class="header">
+		<img src="img/logo.png" class="logo">
+		<ul class="right-text">
+			<li>WORK</li>
+			<li>TEAM</li>
+			<li>CONTACT</li>
+		</ul>
+	</div>
+	<div class="img">
+		<span>
+			我的青春没人陪我度过<br>但我曾经认真爱过
+		</span>
+		<span>
+			I spent youth did not stay,but i seriously love.
+		</span>
+		<div class="gif">
+			<div class="big-c"></div>
+			<div class="big-m"></div>
+			<img src="img/向下箭头.svg" class="down">
+		</div>
+		<img src="img/sky.jpg">
+	</div>
+	<div class="featured-work">
+		<span>FEATURED WORK</span>
+		<span></span>
+		<span>
+			Here you can find some of our latest works, to see the details of these works<br>
+			just click the thumbnails below.
+		</span>
+		<div class="picture">
+			<ul>
+				<li><img src="img/img1.jpg"></li>
+				<li><img src="img/img2.jpg"></li>
+				<li><img src="img/img3.jpg"></li>
+			</ul>
+			<ul>
+				<li><img src="img/img1.jpg"></li>
+				<li><img src="img/img1.jpg"></li>
+				<li><img src="img/img1.jpg"></li>
+			</ul>
+			<ul>
+				<li><img src="img/img1.jpg"></li>
+				<li><img src="img/img1.jpg"></li>
+				<li><img src="img/img1.jpg"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="team">
+		<span>TEAM</span>
+		<span></span>
+		<span>
+			We are a hard working group, who's aim is to listen to your problems<br>
+			and to come up with the best solution possible. We follow the lates trends on<br>
+			the web to create  websites.
+		</span>
+		<div class="t-menber">
+			<ul>
+				<li>
+					<div class="head-portrait">
+						<img src="img/h-p.jpg">
+					</div>
+					<span class="name">Peter</span>
+					<span class="position">design&nbsp;director</span>
+					<ul class="contact">
+						<li><img src="img/github.svg"></li>
+						<li><img src="img/新浪微博.svg"></li>
+					</ul>
+				</li>
+				<li>
+					<div class="head-portrait">
+						<img src="img/h-p.jpg">
+					</div>
+					<span class="name">Peter</span>
+					<span class="position">design&nbsp;director</span>
+					<ul class="contact">
+						<li><img src="img/github.svg"></li>
+						<li><img src="img/新浪微博.svg"></li>
+					</ul>
+				</li>
+				<li>
+					<div class="head-portrait">
+						<img src="img/h-p.jpg">
+					</div>
+					<span class="name">Peter</span>
+					<span class="position">design&nbsp;director</span>
+					<ul class="contact">
+						<li><img src="img/github.svg"></li>
+						<li><img src="img/新浪微博.svg"></li>
+					</ul>
+				</li>
+				<li>
+					<div class="head-portrait">
+						<img src="img/h-p.jpg">
+					</div>
+					<span class="name">Peter</span>
+					<span class="position">design&nbsp;director</span>
+					<ul class="contact">
+						<li><img src="img/github.svg"></li>
+						<li><img src="img/新浪微博.svg"></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="message">
+		<span>CONTACT</span>
+		<span></span>
+		<span>我们在那?</span>
+		<span>联系我们</span>
+		<textarea name="" id="" class="text"></textarea>
+		<textarea name="" id="" class="email"></textarea>
+		<div class="send">
+			SEND
+		</div>
+		<div class="map">
+			<iframe src="map2.html"height="320px"width="320px"frameborder="0"scrolling="no"></iframe>
+		</div>
+	</div>
+	<div class="footer">
+
+	</div>
+</body>
+</html>
